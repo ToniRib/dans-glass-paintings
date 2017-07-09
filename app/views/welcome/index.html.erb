@@ -1,0 +1,81 @@
+<div class="welcome-page">
+  <div class="row gallery">
+    <div class="col-sm-12 col-md-4">
+      <h2>Welcome to Dan's Glass Paintings!</h2>
+      <p>I am an artist located in Denver, CO who makes custom paintings on glass using spray paint. No stencil is ever used more than once, making your painting unique.</p>
+      <p>Feel free to browse the site and <a href="/contact">contact me</a> with any questions!</p>
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <div id="gallery-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#gallery-carousel" data-slide-to="1"></li>
+          <li data-target="#gallery-carousel" data-slide-to="2"></li>
+          <li data-target="#gallery-carousel" data-slide-to="3"></li>
+          <li data-target="#gallery-carousel" data-slide-to="4"></li>
+          <li data-target="#gallery-carousel" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <%= image_tag "gallery/alice_rabbit.jpg" %>
+            <div class="carousel-caption">
+              Book Illustrations
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag "gallery/aeon_flux.jpg" %>
+            <div class="carousel-caption">
+              Movie Inspired
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag "gallery/archer_and_lana.jpg" %>
+            <div class="carousel-caption">
+              Television Characters
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag "gallery/morgan_and_jeff.jpg" %>
+            <div class="carousel-caption">
+              Engagement Photos
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag "gallery/saints.jpg" %>
+            <div class="carousel-caption">
+              Sports Logos
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag "gallery/turing_boxes.jpg" %>
+            <div class="carousel-caption">
+              Company Gifts
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#gallery-carousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#gallery-carousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row custom">
+    <div class="col-sm-12 col-md-4">
+      <%= image_tag "gallery/morgan_and_jeff.jpg" %>
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <h2>Looking for the perfect gift for someone?</h2>
+      <p>Order a custom painting today!</p>
+    </div>
+  </div>
+</div>

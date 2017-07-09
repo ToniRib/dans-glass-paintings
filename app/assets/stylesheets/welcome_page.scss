@@ -1,3 +1,32 @@
 .main-logo {
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.welcome-page {
+  #gallery-carousel {
+    height: 400px;
+    width: 80%;
+    margin: 0 auto 20px auto;
+  }
+
+  .item {
+    align-content: center;
+
+    img {
+      margin: 0 auto;
+      vertical-align: center;
+    }
+  }
+
+  .carousel-control {
+    background-image: none;
+    opacity: 1;
+  }
+
+  .custom img {
+    max-height: 350px;
+    max-width: 350px;
+    width: 100%;
+  }
 }
