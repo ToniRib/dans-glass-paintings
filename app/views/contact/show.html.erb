@@ -1,0 +1,15 @@
+<h2>Contact the Artist</h2>
+
+
+<%= form_tag '/contact', namespace: :contact do %>
+    <label for="name">Name</label>
+    <%= text_field_tag :name %>
+    <br />
+    <label for="name">Email</label>
+    <%= text_field_tag :email %>
+    <br />
+    <label for="message">Message</label>
+    <%= text_area_tag :message %>
+    <br />
+    <%= submit_tag 'Send' %>
+<% end %>
