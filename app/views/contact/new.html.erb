@@ -1,3 +1,14 @@
+<div class="row">
+  <% if errors.any? %>
+      <h4> <%=  pluralize(errors.count, "error") %> prevented this email from being sent: </h4>
+      <ul>
+        <% errors.each do |message| %>
+            <li><strong class="error"> <%= message %> </strong> </li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>
+
 <h2>Contact the Artist</h2>
 
 

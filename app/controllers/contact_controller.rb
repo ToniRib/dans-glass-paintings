@@ -1,16 +1,21 @@
 class ContactController < ApplicationController
-  def show
+  def new
+    render :new, locals: { errors: [] }
   end
 
   def create
-    ContactMailer.send_message(email_params).deliver_now
+    contact_artist_service = ContactArtistService.new(user_request_params)
 
-    redirect_to contact_path, notice: 'Your message has been sent!'
+    if contact_artist_service.generate_request
+      redirect_to contact_path, notice: 'Your message has been sent!'
+    else
+      render :new, locals: { errors: contact_artist_service.errors }
+    end
   end
 
   private
 
-  def email_params
+  def user_request_params
     {
       name:    params[:name],
       email:   params[:email],
