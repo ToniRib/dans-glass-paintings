@@ -1,22 +1,42 @@
-.contact-form {
-  max-width: 400px;
-
-  .row {
-    margin-bottom: 15px;
+.contact-the-artist {
+  h2 {
+    margin-bottom: 20px;
   }
 
-  input[type='text'],
-  input[type='email'] {
-    width: 200px;
-  }
+  .contact-form {
+    max-width: 400px;
 
-  textarea {
-    height: 150px;
-    width: 200px;
-  }
+    .row {
+      margin-bottom: 15px;
+    }
 
-  .btn {
-    background-color: $colorado-blue;
-    color: $colorado-white;
+    input[type='text'],
+    input[type='email'] {
+      width: 200px;
+    }
+
+    textarea {
+      height: 150px;
+      width: 400px;
+    }
+
+    .btn {
+      background-color: $colorado-blue;
+      color: $colorado-white;
+    }
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .contact-the-artist .contact-form textarea {
+    width: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-the-artist .contact-form textarea {
+    width: 250px;
   }
 }
