@@ -14,8 +14,19 @@ body {
   }
 }
 
+.navbar-default .navbar-toggle {
+  &:hover,
+  &:focus {
+    background-color: $colorado-red;
+  }
+
+  .icon-bar {
+    background-color: $colorado-yellow-light;
+  }
+}
+
 .main-link {
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -87,6 +98,18 @@ body {
   }
 }
 
+@media (max-width: 1160px) {
+  .main-link {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 810px) and (min-width: 768px) {
+  .main-link {
+    padding: 0;
+  }
+}
+
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: $white;
@@ -99,7 +122,15 @@ body {
   }
 
   .cart {
-    margin-left: 28px;
+    margin-left: 22px;
+  }
+
+  .main-link {
+    padding: 0 20px;
+  }
+
+  .home-link > a {
+    color: $colorado-yellow-light !important;
   }
 }
 
