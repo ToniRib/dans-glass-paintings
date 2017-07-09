@@ -11,16 +11,11 @@
     <!-- Logo Image Row -->
     <div class="row">
       <div class="col-sm-12">
-        <%= image_tag 'dans_glass_paintings_logo_small.jpeg', class: 'center-block main-logo', alt: 'Main Logo' %>
+        <%= image_tag 'dans_glass_paintings_logo.jpg', class: 'center-block main-logo', alt: 'Main Logo' %>
       </div>
     </div>
 
     <%= render partial: "layouts/navbar" %>
-
-    <!-- Flash Notices -->
-    <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: name %>
-    <% end %>
 
     <div class="container">
       <%= yield %>

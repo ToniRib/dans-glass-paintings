@@ -1,6 +1,5 @@
 class ContactController < ApplicationController
   def show
-    render layout: 'nav_only'
   end
 
   def create

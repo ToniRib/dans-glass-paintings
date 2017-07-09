@@ -1,15 +1,34 @@
 <h2>Contact the Artist</h2>
 
 
-<%= form_tag '/contact', namespace: :contact do %>
-    <label for="name">Name</label>
-    <%= text_field_tag :name %>
-    <br />
-    <label for="name">Email</label>
-    <%= text_field_tag :email %>
-    <br />
-    <label for="message">Message</label>
-    <%= text_area_tag :message %>
-    <br />
-    <%= submit_tag 'Send' %>
+<%= form_tag '/contact', namespace: :contact, class: 'contact-form' do %>
+  <div class="row">
+    <div class="col-sm-12 col-md-3">
+      <label for="name">Name</label>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <%= text_field_tag :name, nil, required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-3">
+      <label for="name">Email</label>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <%= email_field_tag :email, nil, required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-3">
+      <label for="message">Message</label>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <%= text_area_tag :message, nil, required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= submit_tag 'Send', class: 'btn' %>
+    </div>
+  </div>
 <% end %>
