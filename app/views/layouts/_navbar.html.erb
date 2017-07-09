@@ -13,15 +13,16 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
+      <li class="main-link"><a href="/">Home</a></li>
       <li class="dropdown main-link">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+        <a href="#" class="dropdown-toggle hover-only" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
         <ul class="dropdown-menu sub-menu">
           <li><a href="#">Custom Request</a></li>
           <li><a href="#">Gallery Sale</a></li>
         </ul>
       </li>
       <li class="dropdown main-link">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info</a>
+        <a href="#" class="dropdown-toggle hover-only" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info</a>
         <ul class="dropdown-menu sub-menu">
           <li><a href="#">About</a></li>
           <li><a href="#">FAQ</a></li>
@@ -29,7 +30,7 @@
         </ul>
       </li>
       <li class="dropdown main-link">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
+        <a href="#" class="dropdown-toggle hover-only" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
         <ul class="dropdown-menu sub-menu">
           <li><a href="#">Full Gallery</a></li>
           <li><a href="#">Portraits</a></li>
@@ -41,7 +42,16 @@
       <li class="main-link"><a href="#">Blog</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart</a></li>
+      <li class="cart">
+        <a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart</a>
+      </li>
     </ul>
-  </div><!-- /.navbar-collapse -->
+  </div>
 </nav>
+
+<script>
+  $('a.hover-only').click(e => {
+    console.log($(e.target).parent('li'))
+//    $(e.target).parent('li').toggleClass('open');
+  });
+</script>
